@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 18px;
+    background-image: linear-gradient(to right, lightblue, pink);
+}
+
+.search-input {
+    border: 1px solid black;
+    border-radius: 8px;
+    outline: none;
+    height: 32px;
+    width: 280px;
+    padding: 12px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+}
