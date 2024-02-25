@@ -14,7 +14,7 @@ const Body = () => {
     const [filteredListOfRestaurants, setFilteredListOfRestaurants] = useState([]); 
     const [apiStatus, setApiStatus] = useState("");
     const [apiResponseData, setApiResponseData] = useState({});
-
+    console.log(useState());
     const fetchRestaurantsList = async () => {
         setApiStatus(API_STATUS_CONSTANTS.IN_PROGRESS);
         try {
