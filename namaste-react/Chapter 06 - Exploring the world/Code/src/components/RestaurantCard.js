@@ -1,10 +1,12 @@
+import React from 'react';
 import { IMAGE_BASE_URL, RATING_IMAGE_URL } from "../../utils/constants";
 
-const RestaurantCard = ({restaurantInfo}) => {
+const RestaurantCard = React.forwardRef((props, ref) => {
+    const {restaurantInfo} = props;
     const {name, cloudinaryImageId, areaName, cuisines, avgRating, aggregatedDiscountInfoV3, sla} = restaurantInfo;
     
     return (
-        <div className="restaurant-card-container">
+        <div ref={ref} className="restaurant-card-container">
             <div className="restaurant-image-container">
                 <img 
                     src={`${IMAGE_BASE_URL}${cloudinaryImageId}`}
@@ -32,6 +34,6 @@ const RestaurantCard = ({restaurantInfo}) => {
             </div>
         </div>
     )
-};
+});
 
 export default RestaurantCard;
